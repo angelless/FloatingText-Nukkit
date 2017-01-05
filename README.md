@@ -3,11 +3,6 @@
 A very simple floatingtext plugin for [Pocketmine-MP](https://pmmp.io).
 - [![Poggit-CI](https://poggit.pmmp.io/ci.badge/ApexDevelops/FloatingText/FloatingText)](https://poggit.pmmp.io/ci/ApexDevelops/FloatingText/FloatingText)
 
-# Works on
-- [Elywing 1.0.0](https://github.com/H4PM/Elywing)
-- [Genisys 0.16+](https://github.com/iTXTech/Genisys)
-- [BlueLight 1.0.0](https://github.com/BlueLightJapan/BlueLight)
-
 # Commands 
 - /cords - find your Cordinates
 
@@ -20,8 +15,12 @@ A very simple floatingtext plugin for [Pocketmine-MP](https://pmmp.io).
 - {PORT} - Show server port
 - {VERSION} - Show server version
 
-# Download
+# Works on
+- [Elywing 1.0.0](https://github.com/H4PM/Elywing)
+- [Genisys 0.16+](https://github.com/iTXTech/Genisys)
+- [BlueLight 1.0.0](https://github.com/BlueLightJapan/BlueLight)
 
+# Download
 - [releases](https://github.com/ApexDevelops/FloatingText/releases)
 - [poggit](https://poggit.pmmp.io/ci/ApexDevelops/FloatingText/FloatingText)
 - [imagicalmine](https://www.imagicalmine.gq/community/plugins/floatingtext.644/)
