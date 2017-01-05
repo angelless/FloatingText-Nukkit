@@ -1,6 +1,6 @@
 # FloatingText
 
-A very simple floatingtext plugin for Pockermine-MP.
+A very simple floatingtext plugin for Pocketmine-MP.
 - [![Poggit-CI](https://poggit.pmmp.io/ci.badge/ApexDevelops/FloatingText/FloatingText)](https://poggit.pmmp.io/ci/ApexDevelops/FloatingText/FloatingText)
 
 # Works on
