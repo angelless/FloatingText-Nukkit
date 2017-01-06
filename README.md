@@ -17,7 +17,7 @@ A very simple floatingtext plugin for [Pocketmine-MP](https://pmmp.io).
 
 # Works on
 - [Elywing 1.0.0](https://github.com/H4PM/Elywing)
-- [Genisys 0.16+](https://github.com/iTXTech/Genisys)
+- [Genisys 0.16.0](https://github.com/iTXTech/Genisys)
 - [BlueLight 1.0.0](https://github.com/BlueLightJapan/BlueLight)
 
 # Download
