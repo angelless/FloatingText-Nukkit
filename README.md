@@ -19,7 +19,7 @@ A very simple floatingtext plugin for [Pocketmine-MP](https://pmmp.io).
 - [Elywing 1.0.0](https://github.com/H4PM/Elywing)
 - [Genisys 0.16.0](https://github.com/iTXTech/Genisys)
 - [BlueLight 1.0.0](https://github.com/BlueLightJapan/BlueLight)
-- [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
+- [PocketMine-MP 1.0.0](https://github.com/pmmp/PocketMine-MP)
 
 # Download
 - [releases](https://github.com/ApexDevelops/FloatingText/releases)
