@@ -2,7 +2,7 @@ name: FloatingText
 main: FloatingText\Main
 version: 1.3
 api: 2.1.0
-author: Frostyfin
+author: NGk3QR
 description: A simple floating text plugin
 commands:
    var:
