@@ -1,6 +1,6 @@
 # FloatingText
 
-A very simple floatingtext plugin for [Pocketmine-MP](https://pmmp.io).
+A very simple floatingtext plugin.
 - [![Poggit-CI](https://poggit.pmmp.io/ci.badge/ApexDevelops/FloatingText/FloatingText)](https://poggit.pmmp.io/ci/ApexDevelops/FloatingText/FloatingText)
 
 # Commands 
@@ -22,7 +22,5 @@ A very simple floatingtext plugin for [Pocketmine-MP](https://pmmp.io).
 - [PocketMine-MP 1.0.0](https://github.com/pmmp/PocketMine-MP)
 
 # Download
-- [releases](https://github.com/ApexDevelops/FloatingText/releases)
-- [poggit](https://poggit.pmmp.io/ci/ApexDevelops/FloatingText/FloatingText)
-- [imagicalmine](https://www.imagicalmine.gq/community/plugins/floatingtext.644/)
+- [releases](https://github.com/NGk3QR/FloatingText/releases)
 - [my website](http://omegaop.us)
