@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener{
     public function onEnable(){
 	$this->saveDefaultConfig();
     	$this->getServer()->getPluginManager()->registerEvents($this ,$this);
-        $this->getLogger()->info(TF::GREEN ."Plugin Enabled!");
+        $this->getLogger()->info(TF::GREEN ."Plugin by XFizzer Enabled!");
     }
     
     public function onDisable(){

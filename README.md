@@ -1,7 +1,7 @@
 # FloatingText
 
 A very simple floatingtext plugin.
-- [![Poggit-CI](https://poggit.pmmp.io/ci.badge/ApexDevelops/FloatingText/FloatingText)](https://poggit.pmmp.io/ci/ApexDevelops/FloatingText/FloatingText)
+- [![Poggit-CI](https://poggit.pmmp.io/ci.badge/XFizzer/FloatingText/FloatingText)](https://poggit.pmmp.io/ci/XFizzer/FloatingText/FloatingText)
 
 # Commands 
 - /cords - find your Cordinates
@@ -22,5 +22,5 @@ A very simple floatingtext plugin.
 - [PocketMine-MP 1.0.0](https://github.com/pmmp/PocketMine-MP)
 
 # Download
-- [releases](https://github.com/NGk3QR/FloatingText/releases)
+- [releases](https://github.com/XFizzer/FloatingText/releases)
 - [my website](http://omegaop.us)
