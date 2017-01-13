@@ -1,7 +1,8 @@
 # FloatingText
 
 A very simple floatingtext plugin.
-- [![Poggit-CI](https://poggit.pmmp.io/ci.badge/XFizzer/FloatingText/FloatingText)](https://poggit.pmmp.io/ci/XFizzer/FloatingText/FloatingText)
+
+[![Poggit-CI](https://poggit.pmmp.io/ci.badge/XFizzer/FloatingText/FloatingText)](https://poggit.pmmp.io/ci/XFizzer/FloatingText/FloatingText)
 
 # Commands 
 - /cords - find your Cordinates
