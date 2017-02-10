@@ -1,6 +1,4 @@
-<?php
-	
-namespace FloatingText;
+package FloatingText;
 
 import java.io.File;
 import java.util.*;
@@ -26,7 +24,7 @@ class Main extends PluginBase implements Listener{
      public Config config;
     
     public function onEnable(){
-	this.getLogger().info(TextFormat.DARK_GREEN + "WelcomeFloatingText enabled!");
+	this.getLogger().info(TextFormat.DARK_GREEN + "FloatingText enabled!");
 	getServer().getPluginManager().registerEvents(this, this);
 	Config config = new Config(new File(this.getDataFolder(), "config.yml"));
 	this.saveDefaultConfig();
