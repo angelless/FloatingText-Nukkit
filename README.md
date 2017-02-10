@@ -1,0 +1,1 @@
+#A very simple floatingtext plugin for Nukkit
