@@ -1,6 +1,6 @@
-# FloatingText
+# FloatingText-Nukkit
 
-A very simple floatingtext plugin.
+A very simple floatingtext plugin for nukkit.
 
 [![Poggit-CI](https://poggit.pmmp.io/ci.badge/XFizzer/FloatingText/FloatingText)](https://poggit.pmmp.io/ci/XFizzer/FloatingText/FloatingText)
 

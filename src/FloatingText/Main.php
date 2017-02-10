@@ -2,88 +2,64 @@
 	
 namespace FloatingText;
 
-use pocketmine\Player;
-use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerRespawnEvent;
-use pocketmine\utils\TextFormat as TF;
-use pocketmine\plugin\PluginBase;
-use pocketmine\Server;
-use pocketmine\event\Listener;
-use pocketmine\level\particle\FloatingTextParticle;
-use pocketmine\level\particle\Particle;
-use pocketmine\level\Level;
-use pocketmine\level\Position;
-use pocketmine\level\Position\getLevel;
-use pocketmine\plugin\PluginManager;
-use pocketmine\plugin\Plugin;
-use pocketmine\math\Vector3;
-use pocketmine\utils\config;
-use FloatingText\Commands\cord;
+import java.io.File;
+import java.util.*;
+
+import cn.nukkit.Player;
+import cn.nukkit.event.player.PlayerJoinEvent;
+import cn.nukkit.event.player.PlayerRespawnEvent;
+import cn.nukkit.utils.TextFormat;
+import cn.nukkit.plugin.PluginBase;
+import cn.nukkit.Server;
+import cn.nukkit.event.Listener;
+import cn.nukkit.level.particle.FloatingTextParticle;
+import cn.nukkit.level.particle.Particle;
+import cn.nukkit.level.Level;
+import cn.nukkit.level.Position;
+import cn.nukkit.plugin.PluginManager;
+import cn.nukkit.plugin.Plugin;
+import cn.nukkit.math.Vector3;
+import cn.nukkit.utils.Config;
 			
 class Main extends PluginBase implements Listener{
+
+     public Config config;
     
     public function onEnable(){
-	$this->saveDefaultConfig();
-    	$this->getServer()->getPluginManager()->registerEvents($this ,$this);
-        $this->getLogger()->info(TF::GREEN ."Plugin by XFizzer Enabled!");
+	this.getLogger().info(TextFormat.DARK_GREEN + "WelcomeFloatingText enabled!");
+	getServer().getPluginManager().registerEvents(this, this);
+	Config config = new Config(new File(this.getDataFolder(), "config.yml"));
+	this.saveDefaultConfig();
+	this.saveResource("config.yml", true);
     }
     
-    public function onDisable(){
-    	$this->getLogger()->info(TF::RED ."");
+        public void onLoad() {
+        this.getLogger().info(TextFormat.DARK_GREEN + "FloatingText loaded!");
     }	
 					
-			public function onJoin(PlayerJoinEvent $event){
-			 $player = $event->getPlayer();
-             $level = $player->getLevel();
-       $cfg = new Config($this->getDataFolder() . "/config.yml", Config::YAML);
-           $x1 = $cfg->get("Xs");
-           $y1 = $cfg->get("Ys");
-           $z1 = $cfg->get("Zs");
-           $x2 = $cfg->get("Xss");
-           $y2 = $cfg->get("Yss");
-           $z2 = $cfg->get("Zss");
-                $line1 = $cfg->get("LINE1");  
-                $line2 = $cfg->get("LINE2"); 
-                $line3 = $cfg->get("LINE3"); 
-                $line4 = $cfg->get("LINE4"); 
-                $line5 = $cfg->get("LINE5"); 
-                $line6 = $cfg->get("LINE6");  
-                $line7 = $cfg->get("LINE7"); 
-                $line8 = $cfg->get("LINE8"); 
-                $line9 = $cfg->get("LINE9"); 
-                $line10 = $cfg->get("LINE10"); 
-                     $online = count(Server::getInstance()->getOnlinePlayers()); 
-                    $maxonline = $this->getServer()->getMaxPlayers();
-                   $playername = $player->getName();
-                  $ip = $this->getServer()->getIp();
-                 $mote = $this->getServer()->getMotd();
-                $port = $this->getServer()->getPort();
-               $version = $this->getServer()->getVersion();                                  
-              $rs = TF::RESET. "\n";
-              $allline = $line1. $rs. $line2. $rs. $line3. $rs. $line4. $rs. $line5;
-              $allline = str_replace("{ONLINE}", $online, $allline);
-              $allline = str_replace("{MAXONLINE}", $maxonline, $allline);
-              $allline = str_replace("{PLAYERNAME}", $playername, $allline);
-              $allline = str_replace("{IP}", $ip, $allline);
-              $allline = str_replace("{MOTE}", $mote, $allline);
-              $allline = str_replace("{PORT}", $port, $allline);
-              $allline = str_replace("{VERSION}", $version, $allline);
-              $level->addparticle(new FloatingTextParticle(new Vector3($x1, $y1, $z1), $allline));
-              
-              $allline1 = $line6. $rs. $line7. $rs. $line8. $rs. $line9. $rs. $line10;
-              $allline1 = str_replace("{ONLINE}", $online, $allline);
-              $allline1 = str_replace("{MAXONLINE}", $maxonline, $allline);
-              $allline1 = str_replace("{PLAYERNAME}", $playername, $allline);
-              $allline1 = str_replace("{IP}", $ip, $allline);
-              $allline1 = str_replace("{MOTE}", $mote, $allline);
-              $allline1 = str_replace("{PORT}", $port, $allline);
-              $allline1 = str_replace("{VERSION}", $version, $allline);
-              $level->addparticle(new FloatingTextParticle(new Vector3($x2, $y2, $z2), $allline1));
-            
-         }
-       public function onLoad(){
-		$this->getServer()->getCommandMap()->register("cords", new cord("cords"));
-	}
+			    public void onJoin(PlayerJoinEvent e) {
+	    Player player = e.getPlayer();
+	    Position pos = e.getPlayer().getLevelBlock();
+	    int x1 = config.getInt("Xs");
+	    int y1 = config.getInt("Ys");
+	    int z1 = config.getInt("Zs");
+	    String line1 = config.getString("LINE1");
+	    String line2 = config.getString("LINE2");
+	    String line3 = config.getString("LINE3");
+	    String line4 = config.getString("LINE4");
+	    int online = Server.getInstance().getOnlinePlayers().size();
+	    int maxonline = this.getServer().getMaxPlayers();
+	    String playername = player.getName();                                                  
+ 	    String rs = TextFormat.RESET + "\n";
+	    String allline = line1 + rs + line2 + rs + line3 + rs + line4;
+	    allline = allline.replace("{ONLINE}", String.valueOf(online));
+	    allline = allline.replace("{MAXONLINE}", String.valueOf(maxonline));
+	    allline = allline.replace("{PLAYERNAME}", String.valueOf(playername));
+	    FloatingTextParticle particle = new FloatingTextParticle(new Vector3(x1, y1, z1), allline);
+	    e.getPlayer().getLevel().addParticle(particle);
+	    //particle.setInvisible();
+    }
+      
           
 }
 
