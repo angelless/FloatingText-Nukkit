@@ -11,6 +11,8 @@ LINE1: "Welcome back, {PLAYERNAME} !"
 LINE2: "There are {ONLINE}/{MAXONLINE} Players online!"
 LINE3: "{IP}:{PORT}"
 LINE4: "{VERSION}"
+LINE5: "hello"
+LINE6: "There"
 
 #Cordinates
 # you can find your Cordinates by doing /cords in game
